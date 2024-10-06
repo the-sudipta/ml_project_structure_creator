@@ -7,4 +7,4 @@ This is a Python script that creates a machine learning project structure with b
 You can install this package using pip:
 
 ```bash
-pip install ml_project_structure_creator
+pip install ml-project-structure-creator==0.3.3
