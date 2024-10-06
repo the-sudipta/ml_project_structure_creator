@@ -1,4 +1,5 @@
 import os
+import argparse  # Ensure argparse is imported
 
 def create_ml_project_structure(project_name):
     """Create a machine learning project folder structure with specified code files."""
@@ -643,6 +644,17 @@ setup(
 
     print(f"Project '{project_name}' structure created successfully.")
 
+def main():
+    # Use argparse to handle command-line arguments
+    parser = argparse.ArgumentParser(description='Create a machine learning project structure.')
+    parser.add_argument('project_name', type=str, nargs='?', help='The name of the project to create')
+    args = parser.parse_args()
+
+    # Prompt for project name if not provided
+    if not args.project_name:
+        args.project_name = input("Enter the project name: ")
+
+    create_ml_project_structure(args.project_name)
+
 if __name__ == "__main__":
-    project_name = input("Enter the project name: ")
-    create_ml_project_structure(project_name)
+    main()

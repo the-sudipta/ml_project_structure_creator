@@ -1,2 +1,0 @@
-[console_scripts]
-create_ml_structure = create_ml_structure:main

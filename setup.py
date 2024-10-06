@@ -2,9 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name='ml_project_structure_creator',
-    version='0.2.0',
+    version='0.3.3',
     packages=find_packages(),  # Automatically find packages
-    scripts=['create_ml_structure.py'],  # Your main script
     description='A script to create a machine learning project structure with EDA code.',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
@@ -17,10 +16,10 @@ setup(
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
         'Operating System :: OS Independent',
     ],
-    python_requires='>=3.10.11',  # Adjust according to your script requirements
+    python_requires='>=3.10.11',
     entry_points={
         'console_scripts': [
-            'create_ml_structure=create_ml_structure:main',  # Adjusting for the function in your script
+            'create_ml_structure=ml_project_structure_creator.create_ml_structure:main',  # Corrected to call main()
         ],
     },
 )
